@@ -1,0 +1,36 @@
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1.8rem 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
+
+footer .footer-left {
+  width: auto;
+}
+
+footer .footer-center {
+  flex: 1;
+  text-align: center;
+}
+
+footer .footer-right {
+  width: auto;
+}
+
+footer span {
+  color: var(--accent);
+}
+
+/* RESPONSIVE FOOTER */
+@media (max-width: 480px) {
+  footer {
+    padding: 1.5rem 5vw;
+  }
+}
