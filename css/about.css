@@ -1,0 +1,71 @@
+/* A propos */
+#about {
+   border-bottom: 1px solid var(--border);
+   border-top: 1px solid var(--border);
+   background: var(--bg2);
+   display: flex;
+   justify-content: center;
+}
+
+.about-grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 4rem;
+   max-width: 1000px;
+}
+
+.about-avatar {
+   aspect-ratio: 1;
+   max-width: 280px;
+   border-radius: 10px;
+   overflow: hidden;
+   background: var(--surface);
+   border: 1px solid var(--border);
+   position: relative;
+}
+
+.about-avatar img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: transform 0.3s ease;
+   display: block;
+}
+
+.about-avatar::after {
+   content: '';
+   position: absolute;
+   inset: 0;  
+   transition: opacity 0.3s ease;
+   background: linear-gradient(135deg, #00e5a010, transparent 60%);
+}
+
+.about-text p {
+   margin-bottom: 1.5rem;
+   color: var(--muted);
+   font-size: 0.95rem;
+}
+
+.about-avatar p strong {
+   color: var(--text);
+}
+
+.about-meta {
+   display: flex;
+   gap: 1.5rem;
+   margin-top: 2rem;
+   flex-wrap: wrap;
+}
+
+/* RESPONSIVE ABOUT */
+@media (max-width: 768px) {
+   .about-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+   }
+
+   .about-avatar {
+      max-width: 50%;
+      font-size: 3.5rem;
+   }
+}
